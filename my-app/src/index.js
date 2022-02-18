@@ -3,22 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Component } from 'react/cjs/react.production.min';
 
-function tick() {
-  const element = (
-    <div>
-      <h1>Hello, world</h1>
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
-    </div>
+
+function Welcome(props){
+  return(
+    <h1>Hello {props.name}</h1>
   )
+}
+const element = <Welcome name="sara"/>
   ReactDOM.render(
     element,
     document.getElementById('root')
   );
   
-}
-
-setInterval(tick, 1000);
 
 
 
