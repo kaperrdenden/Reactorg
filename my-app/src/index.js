@@ -5,13 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Component } from 'react/cjs/react.production.min';
 
+function NumberList(props) {
+  const listItems = props.numbers.map((number) => <li>{number}</li>);
 
-const number = [1,2,3,4,5];
-const listItems = number.map((number) => <li>{number}</li>);
+  return(
+    <ul>
+      {listItems}
+    </ul>
+  )
+}
+
+const numbers = [1,2,3,4,5];
+
 
 
 ReactDOM.render(
-  <ul>{listItems}</ul>,
+  <NumberList numbers={numbers}/>,
   document.getElementById('root')
 );
 
