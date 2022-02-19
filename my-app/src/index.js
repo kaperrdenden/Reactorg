@@ -6,7 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { Component } from 'react/cjs/react.production.min';
 
 function NumberList(props) {
-  const listItems = props.numbers.map((number) => <li>{number}</li>);
+  const listItems = props.numbers.map((number) =>
+     <li key={number.toString()}>
+      {number}
+    </li>);
 
   return(
     <ul>
